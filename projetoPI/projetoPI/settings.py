@@ -54,7 +54,7 @@ ROOT_URLCONF = "projetoPI.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "core" / "templates"],  # Diretório correto dos templates
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -118,7 +118,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Garante que a pasta 'static' do projeto seja usada
+    BASE_DIR / "core/static",  # Garante que a pasta 'static' do projeto seja usada
 ]
 
 # Default primary key field type
